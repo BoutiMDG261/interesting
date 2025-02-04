@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Roboto:wght@100;300;400;500;700;900&family=Archivo+Black&display=swap"
+        rel="stylesheet">
+    <style>
+        .josefin {
+            font-family: 'Josefin Sans', sans-serif;
+            letter-spacing: 3px;
+        }
+
+        .archivo {
+            font-family: 'roboto', sans-serif;
+            letter-spacing: 12px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .fadeIn {
+            animation: fadeIn 2s ease-out;
+        }
+
+        .zoomIn {
+            animation: zoomIn 1.5s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative bg-[url(assets/images/paris.webp)] bg-no-repeat bg-cover bg-bottom
+    w-[100vw] h-[100vh]">
+        <div class="absolute inset-0 bg-white opacity-75"></div>
+        <div class="relative h-[90vh] flex flex-col justify-center items-center gap-y-20">
+            <img src="./assets/images/intere_logo_transparent.png" width="35%" style="object-fit: cover;"
+                alt="interesting+logo" class="zoomIn">
+            <div class="text-center fadeIn">
+                <p class="josefin text-4xl 2xl:text-6xl font-light mb-1">Notre site arrive bientôt </p><br>
+                <p class="archivo text-5xl 2xl:text-7xl uppercase font-bold mt-1">en ligne</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
