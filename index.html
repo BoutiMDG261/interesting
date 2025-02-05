@@ -46,26 +46,28 @@
 
         .fadeIn {
             animation: fadeIn 2s ease-out;
+            will-change: transform, opacity;
         }
 
         .zoomIn {
             animation: zoomIn 1.5s ease-out;
+            will-change: transform, opacity;
         }
     </style>
 </head>
 
 <body>
     <div
-        class="relative bg-[url(assets/images/e-com-paris.webp)] bg-no-repeat bg-cover md:bg-bottom bg-center w-[100vw] h-[100vh] flex items-center">
-        <div class="absolute inset-0 bg-white opacity-65 md:bg-black md:opacity-30"></div>
+        class="relative bg-[url(assets/images/e-com-paris.webp)] bg-no-repeat bg-cover sm:bg-bottom bg-center w-[100vw] h-[100vh] flex items-center">
+        <div class="absolute inset-0 bg-white/65 sm:bg-black/30"></div>
         <div
-            class="relative h-[75vh] w-[75%] md:w-[50%] mx-auto flex flex-col justify-center items-center gap-y-20 zoomIn">
-            <div class="absolute md:inset-0 bg-white opacity-80 shadow-xl"></div>
-            <img src="./assets/images/intere_logo_transparent.png" style="object-fit: cover;" alt="interesting+logo"
-                class="relative md:w-[35%] w-50% zoomIn">
+            class="relative h-[75vh] w-[75%] sm:w-[50%] mx-auto flex flex-col justify-center items-center gap-y-20 zoomIn">
+            <div class="absolute sm:inset-0 bg-white/80 shadow-xl backdrop-blur-md"></div>
+            <img src="./assets/images/intere_logo_transparent.png" alt="interesting+logo"
+                class="relative sm:w-[50%] w-50% max-w-full h-auto zoomIn">
             <div class="relative text-center fadeIn">
-                <p class="josefin text-2xl md:text-4xl 2xl:text-6xl font-light mb-1">Notre site arrive bientôt</p><br>
-                <p class="archivo text-3xl md:text-5xl 2xl:text-7xl uppercase font-bold mt-1">en ligne</p>
+                <p class="josefin text-2xl sm:text-4xl 2xl:text-6xl font-light mb-1">Notre site arrive bientôt</p><br>
+                <p class="archivo text-3xl sm:text-5xl 2xl:text-7xl uppercase font-bold mt-1">en ligne</p>
             </div>
         </div>
     </div>
